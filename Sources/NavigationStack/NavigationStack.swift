@@ -37,6 +37,11 @@ public enum PopDestination {
 
 public class NavigationStack: ObservableObject {
     fileprivate private(set) var navigationType = NavigationType.push
+    
+    public init() {
+        
+    }
+    
     private var viewStack = ViewStack() {
         didSet {
             currentView = viewStack.peek()
