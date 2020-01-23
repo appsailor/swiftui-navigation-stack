@@ -118,7 +118,7 @@ private struct ViewElement: Identifiable, Equatable {
 // MARK: Views
 
 public struct NavigationStackView<Root>: View where Root: View {
-    @ObservedObject private var navViewModel = NavigationStack()
+    @EnvironmentObject private var navViewModel: NavigationStack
     private let rootViewID = "root"
     private let rootView: Root
     private let transitions: (push: AnyTransition, pop: AnyTransition)
